@@ -1,10 +1,17 @@
 <?php
 
-$controller = $_GET['controller'];
-$metodo = $_GET['acao'];
-$controller .= "Controller";
+const FOLDER = 'aula04';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/aula04/controller/' . $controller . '.php';
+if (isset($_GET['controller']) && isset($_GET['acao'])){
+    $controller = $_GET['controller'];
+    $metodo = $_GET['acao'];
+    $controller .= "Controller";
 
-$objeto = new $controller();
-$objeto->$metodo();
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/' . FOLDER . '/controller/' . $controller . '.php';
+
+    $objeto = new $controller();
+    $objeto->$metodo();
+}
+else{
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/' . FOLDER . '/view/home.php';
+}
