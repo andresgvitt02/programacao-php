@@ -12,6 +12,12 @@
     crossorigin="anonymous"></script>
 </head>
 
+<header class="container-fluid bg-black text-white text-center p-4 ">
+    <h1 class="mb-2">Atividade de AP1
+    </h1>
+    <h2>Andres Gonçalves Vitt</h2>
+  </header>
+
 <body>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/' . FOLDER . '/view/navbar.php'; ?>
 </body>
